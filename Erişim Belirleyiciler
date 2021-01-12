@@ -1,0 +1,66 @@
+// oop.cpp : Bu dosya 'main' işlevi içeriyor. Program yürütme orada başlayıp biter.
+//
+
+#include <iostream>
+using namespace std;
+class yemek{
+    public:
+    int kalori;
+    int fiyat;
+    int gram;
+
+    int isitmak(int sure){
+    if (sure<300)
+        kalori+=sure;
+        else
+            kalori = 0;
+    }
+};
+class insan {
+public:
+    float kilo;
+    int boy;
+    int yas;
+
+    int yemek(yemek y) {
+      kilo += y.kalori/(float)7000;
+    }
+    void maasBastir(){
+    cout<< "benim maasim:"<<maas<<endl;}
+
+    int f(int x){
+    return x+10;
+    }
+private:
+    int maas=500;
+
+};
+
+int main()
+{
+
+    yemek sandivic;
+    sandivic.fiyat=10;
+    sandivic.kalori=233;
+    sandivic.gram=100;
+    int x;
+    x=10;
+    insan ali;
+    ali.boy=180;
+    ali.kilo=80;
+    ali.yas=24;
+
+    cout << ali.boy <<"   "<<ali.kilo << "    "  << ali.yas<< endl;
+    ali.yemek(sandivic);
+    cout << ali.boy<< "    " <<ali.kilo  << "   "   << ali.yas<< endl;
+    insan veli;
+    veli.boy=170;
+    veli.kilo=70;
+    veli.yas=25;
+    cout << veli.boy<<"     "  <<veli.kilo <<"   "       <<veli.yas<<  endl;
+    sandivic.isitmak(50);
+    veli.yemek(sandivic);
+
+    cout << veli.boy<< "  "  <<veli.kilo << "   "  <<veli.yas<<  endl;
+     veli.maas=6000;
+}
