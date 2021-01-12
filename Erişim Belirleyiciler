@@ -1,5 +1,3 @@
-// oop.cpp : Bu dosya 'main' işlevi içeriyor. Program yürütme orada başlayıp biter.
-//
 
 #include <iostream>
 using namespace std;
@@ -62,5 +60,5 @@ int main()
     veli.yemek(sandivic);
 
     cout << veli.boy<< "  "  <<veli.kilo << "   "  <<veli.yas<<  endl;
-     veli.maas=6000;
+     veli.maasBastir();
 }
